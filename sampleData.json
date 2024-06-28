@@ -178,5 +178,305 @@
       }
     ],
     "risk": false
+  },
+  {
+    "name": "Isaac Newton",
+    "age": 55,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 88,
+        "bloodPressureSystolic": 150,
+        "bloodPressureDiastolic": 95,
+        "oxygenSaturation": 94,
+        "temperature": 37.5
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Marie Curie",
+    "age": 48,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 72,
+        "bloodPressureSystolic": 125,
+        "bloodPressureDiastolic": 82,
+        "oxygenSaturation": 98,
+        "temperature": 36.7
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Albert Einstein",
+    "age": 70,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 95,
+        "bloodPressureSystolic": 165,
+        "bloodPressureDiastolic": 100,
+        "oxygenSaturation": 92,
+        "temperature": 38.1
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Rosalind Franklin",
+    "age": 35,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 68,
+        "bloodPressureSystolic": 115,
+        "bloodPressureDiastolic": 75,
+        "oxygenSaturation": 99,
+        "temperature": 36.5
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Stephen Hawking",
+    "age": 65,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 105,
+        "bloodPressureSystolic": 170,
+        "bloodPressureDiastolic": 105,
+        "oxygenSaturation": 91,
+        "temperature": 38.3
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Ada Lovelace",
+    "age": 40,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 75,
+        "bloodPressureSystolic": 128,
+        "bloodPressureDiastolic": 84,
+        "oxygenSaturation": 97,
+        "temperature": 36.8
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Nikola Tesla",
+    "age": 58,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 92,
+        "bloodPressureSystolic": 155,
+        "bloodPressureDiastolic": 98,
+        "oxygenSaturation": 93,
+        "temperature": 37.9
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Dorothy Hodgkin",
+    "age": 62,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 78,
+        "bloodPressureSystolic": 135,
+        "bloodPressureDiastolic": 88,
+        "oxygenSaturation": 96,
+        "temperature": 37.0
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Richard Feynman",
+    "age": 50,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 85,
+        "bloodPressureSystolic": 145,
+        "bloodPressureDiastolic": 92,
+        "oxygenSaturation": 95,
+        "temperature": 37.4
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Barbara McClintock",
+    "age": 75,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 82,
+        "bloodPressureSystolic": 160,
+        "bloodPressureDiastolic": 95,
+        "oxygenSaturation": 94,
+        "temperature": 37.2
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Max Planck",
+    "age": 68,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 76,
+        "bloodPressureSystolic": 138,
+        "bloodPressureDiastolic": 86,
+        "oxygenSaturation": 97,
+        "temperature": 36.9
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Emmy Noether",
+    "age": 45,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 90,
+        "bloodPressureSystolic": 152,
+        "bloodPressureDiastolic": 94,
+        "oxygenSaturation": 95,
+        "temperature": 37.6
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Erwin Schrödinger",
+    "age": 56,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 70,
+        "bloodPressureSystolic": 122,
+        "bloodPressureDiastolic": 80,
+        "oxygenSaturation": 98,
+        "temperature": 36.6
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Lise Meitner",
+    "age": 72,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 98,
+        "bloodPressureSystolic": 168,
+        "bloodPressureDiastolic": 102,
+        "oxygenSaturation": 92,
+        "temperature": 38.0
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Werner Heisenberg",
+    "age": 53,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 74,
+        "bloodPressureSystolic": 130,
+        "bloodPressureDiastolic": 85,
+        "oxygenSaturation": 97,
+        "temperature": 36.8
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Chien-Shiung Wu",
+    "age": 60,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 86,
+        "bloodPressureSystolic": 148,
+        "bloodPressureDiastolic": 93,
+        "oxygenSaturation": 94,
+        "temperature": 37.3
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Paul Dirac",
+    "age": 66,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 80,
+        "bloodPressureSystolic": 140,
+        "bloodPressureDiastolic": 88,
+        "oxygenSaturation": 96,
+        "temperature": 37.1
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Katherine Johnson",
+    "age": 80,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 88,
+        "bloodPressureSystolic": 158,
+        "bloodPressureDiastolic": 96,
+        "oxygenSaturation": 93,
+        "temperature": 37.5
+      }
+    ],
+    "risk": true
+  },
+  {
+    "name": "Enrico Fermi",
+    "age": 58,
+    "gender": "Male",
+    "vitalHistory": [
+      {
+        "heartRate": 72,
+        "bloodPressureSystolic": 132,
+        "bloodPressureDiastolic": 84,
+        "oxygenSaturation": 98,
+        "temperature": 36.7
+      }
+    ],
+    "risk": false
+  },
+  {
+    "name": "Jocelyn Bell Burnell",
+    "age": 47,
+    "gender": "Female",
+    "vitalHistory": [
+      {
+        "heartRate": 94,
+        "bloodPressureSystolic": 156,
+        "bloodPressureDiastolic": 98,
+        "oxygenSaturation": 94,
+        "temperature": 37.8
+      }
+    ],
+    "risk": true
   }
 ]
