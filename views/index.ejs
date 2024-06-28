@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+
+<h1>Predictive Health Alert System</h1>
+
+<form action="/api/patients" method="POST">
+  <input type="text" name="name" placeholder="Name" required />
+  <input type="number" name="age" placeholder="Age" />
+  <select name="gender">
+    <option value="">Select Gender</option>
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Other">Other</option>
+  </select>
+  <input type="number" name="heartRate" placeholder="Heart Rate" required />
+  <input
+    type="number"
+    name="bloodPressureSystolic"
+    placeholder="Blood Pressure Systolic"
+    required
+  />
+  <input
+    type="number"
+    name="bloodPressureDiastolic"
+    placeholder="Blood Pressure Diastolic"
+    required
+  />
+  <input
+    type="number"
+    name="oxygenSaturation"
+    placeholder="Oxygen Saturation"
+    required
+  />
+  <input
+    type="number"
+    name="temperature"
+    placeholder="Temperature (celsius)"
+    required
+  />
+  <button type="submit">Add Patient</button>
+</form>
+
+<div id="result"></div>
+
+<a href="/dashboard">View Dashboard</a>
+
+<%- include('partials/footer') %>

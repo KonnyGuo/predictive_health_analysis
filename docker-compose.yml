@@ -1,0 +1,17 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        - MONGO_URI=${MONGO_URI}
+    ports:
+      - "${PORT:-8000}:${PORT:-8000}"
+    environment:
+      - MONGO_URI=${MONGO_URI}
+      - PORT=${PORT:-8000}
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+
+volumes:
+  mongo_data:

@@ -1,0 +1,105 @@
+// const { assessRisk } = require("../utils/riskAssessment");
+// const Patient = require("../models/patient");
+
+// exports.makePrediction = async (req, res) => {
+//   try {
+//     const { patientId, vitals } = req.body;
+
+//     if (!patientId || !vitals) {
+//       return res
+//         .status(400)
+//         .json({ message: "Missing patient ID or vital signs" });
+//     }
+
+//     const risk = assessRisk(vitals);
+
+//     // Update patient's risk status and add new vitals to history
+//     const updatedPatient = await Patient.findByIdAndUpdate(
+//       patientId,
+//       {
+//         $push: { vitalHistory: vitals },
+//         risk: risk,
+//         updatedAt: new Date(),
+//       },
+//       { new: true }
+//     );
+
+//     if (!updatedPatient) {
+//       return res.status(404).json({ message: "Patient not found" });
+//     }
+
+//     res.json({
+//       risk: risk,
+//       message: risk ? "High risk detected" : "Low risk",
+//       patientName: updatedPatient.name,
+//     });
+//   } catch (error) {
+//     console.error("Prediction error:", error);
+//     res
+//       .status(500)
+//       .json({ message: "Error making prediction", error: error.message });
+//   }
+// };
+
+// exports.checkAndAlert = async (patientId, vitals) => {
+//   try {
+//     const patient = await Patient.findById(patientId);
+
+//     if (!patient) {
+//       console.error(`Patient with ID ${patientId} not found`);
+//       return false;
+//     }
+
+//     const risk = assessRisk(vitals);
+
+//     // Update patient's risk status and add new vitals to history
+//     await Patient.findByIdAndUpdate(patientId, {
+//       $push: { vitalHistory: vitals },
+//       risk: risk,
+//       updatedAt: new Date(),
+//     });
+
+//     if (risk) {
+//       // Implement your alerting mechanism here
+//       console.log(
+//         `ALERT: Patient ${patient.name} (ID: ${patientId}) has a high risk score`
+//       );
+//       // You could send an email, SMS, or trigger a notification in your application
+//     }
+
+//     return risk;
+//   } catch (error) {
+//     console.error("Error checking risk:", error);
+//     return false;
+//   }
+// };
+
+// exports.getPatientPredictions = async (req, res) => {
+//   try {
+//     const { patientId } = req.params;
+
+//     const patient = await Patient.findById(patientId);
+
+//     if (!patient) {
+//       return res.status(404).json({ message: "Patient not found" });
+//     }
+
+//     const predictions = patient.vitalHistory.map((vitals) => ({
+//       vitals: vitals,
+//       risk: assessRisk(vitals),
+//       timestamp: vitals.timestamp,
+//     }));
+
+//     res.json({
+//       patientName: patient.name,
+//       predictions: predictions,
+//     });
+//   } catch (error) {
+//     console.error("Error getting patient predictions:", error);
+//     res
+//       .status(500)
+//       .json({ message: "Error retrieving predictions", error: error.message });
+//   }
+// };
+
+// module.exports = exports;

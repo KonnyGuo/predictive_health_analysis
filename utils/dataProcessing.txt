@@ -1,0 +1,62 @@
+// exports.processTimeSeriesData = (historicalData) => {
+//   if (!historicalData || historicalData.length === 0) {
+//     return null;
+//   }
+
+//   const sortedData = historicalData.sort((a, b) => a.timestamp - b.timestamp);
+
+//   const trends = {
+//     heartRate: calculateTrend(sortedData.map((d) => d.heartRate)),
+//     bloodPressureSystolic: calculateTrend(
+//       sortedData.map((d) => d.bloodPressureSystolic)
+//     ),
+//     bloodPressureDiastolic: calculateTrend(
+//       sortedData.map((d) => d.bloodPressureDiastolic)
+//     ),
+//     oxygenSaturation: calculateTrend(sortedData.map((d) => d.oxygenSaturation)),
+//     temperature: calculateTrend(sortedData.map((d) => d.temperature)),
+//   };
+
+//   const averages = {
+//     heartRate: calculateAverage(sortedData.map((d) => d.heartRate)),
+//     bloodPressureSystolic: calculateAverage(
+//       sortedData.map((d) => d.bloodPressureSystolic)
+//     ),
+//     bloodPressureDiastolic: calculateAverage(
+//       sortedData.map((d) => d.bloodPressureDiastolic)
+//     ),
+//     oxygenSaturation: calculateAverage(
+//       sortedData.map((d) => d.oxygenSaturation)
+//     ),
+//     temperature: calculateAverage(sortedData.map((d) => d.temperature)),
+//   };
+
+//   const mostRecent = sortedData[sortedData.length - 1];
+
+//   return {
+//     trends,
+//     averages,
+//     mostRecent,
+//     dataPoints: sortedData.length,
+//   };
+// };
+
+// function calculateTrend(data) {
+//   if (data.length < 2) return 0;
+//   const xMean = (data.length - 1) / 2;
+//   const yMean = data.reduce((sum, y) => sum + y, 0) / data.length;
+
+//   let numerator = 0;
+//   let denominator = 0;
+
+//   for (let i = 0; i < data.length; i++) {
+//     numerator += (i - xMean) * (data[i] - yMean);
+//     denominator += Math.pow(i - xMean, 2);
+//   }
+
+//   return numerator / denominator;
+// }
+
+// function calculateAverage(data) {
+//   return data.reduce((sum, value) => sum + value, 0) / data.length;
+// }

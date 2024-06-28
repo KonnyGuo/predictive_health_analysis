@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+
+  <body>
+    <%- include('partials/header') %>
+
+    <h1>Patient Dashboard</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Heart Rate</th>
+          <th>Blood Pressure</th>
+          <th>Oxygen Saturation</th>
+          <th>Temperature (celsius)</th>
+          <th>Risk</th>
+          <th>Last Updated</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% patients.forEach(patient => { %>
+        <tr>
+          <td><%= patient.name %></td>
+          <td><%= patient.age %></td>
+          <td><%= patient.gender %></td>
+          <td><%= patient.heartRate %></td>
+          <td><%= patient.bloodPressure %></td>
+          <td><%= patient.oxygenSaturation %></td>
+          <td><%= patient.temperature %></td>
+          <td><%= patient.risk %></td>
+          <td><%= patient.updatedAt.toLocaleString() %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </body>
+</html>
