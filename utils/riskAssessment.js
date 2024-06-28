@@ -10,69 +10,8 @@ function loadModel() {
     console.log("Trained model loaded successfully");
   } catch (error) {
     console.error("Error loading trained model:", error);
-    initializeModel();
+    // initializeModel();
   }
-}
-
-function initializeModel() {
-  console.log("Initializing a new model");
-  trainedModel = new brain.NeuralNetwork();
-
-  const trainingData = [
-    {
-      input: normalizeInput({
-        heartRate: 70,
-        bloodPressureSystolic: 120,
-        bloodPressureDiastolic: 80,
-        oxygenSaturation: 98,
-        temperature: 37,
-      }),
-      output: { risk: 0 },
-    },
-    {
-      input: normalizeInput({
-        heartRate: 110,
-        bloodPressureSystolic: 160,
-        bloodPressureDiastolic: 100,
-        oxygenSaturation: 92,
-        temperature: 39,
-      }),
-      output: { risk: 1 },
-    },
-    {
-      input: normalizeInput({
-        heartRate: 55,
-        bloodPressureSystolic: 85,
-        bloodPressureDiastolic: 55,
-        oxygenSaturation: 94,
-        temperature: 35.5,
-      }),
-      output: { risk: 1 },
-    },
-    {
-      input: normalizeInput({
-        heartRate: 95,
-        bloodPressureSystolic: 145,
-        bloodPressureDiastolic: 95,
-        oxygenSaturation: 96,
-        temperature: 38.5,
-      }),
-      output: { risk: 1 },
-    },
-    {
-      input: normalizeInput({
-        heartRate: 75,
-        bloodPressureSystolic: 130,
-        bloodPressureDiastolic: 85,
-        oxygenSaturation: 97,
-        temperature: 36.8,
-      }),
-      output: { risk: 0 },
-    },
-  ];
-
-  trainedModel.train(trainingData);
-  console.log("New model trained with sample data");
 }
 
 function normalizeInput(vitals) {
@@ -128,3 +67,64 @@ function assessRisk(vitals) {
 loadModel();
 
 module.exports = { assessRisk };
+
+// function initializeModel() {
+//   console.log("Initializing a new model");
+//   trainedModel = new brain.NeuralNetwork();
+
+//   const trainingData = [
+//     {
+//       input: normalizeInput({
+//         heartRate: 70,
+//         bloodPressureSystolic: 120,
+//         bloodPressureDiastolic: 80,
+//         oxygenSaturation: 98,
+//         temperature: 37,
+//       }),
+//       output: { risk: 0 },
+//     },
+//     {
+//       input: normalizeInput({
+//         heartRate: 110,
+//         bloodPressureSystolic: 160,
+//         bloodPressureDiastolic: 100,
+//         oxygenSaturation: 92,
+//         temperature: 39,
+//       }),
+//       output: { risk: 1 },
+//     },
+//     {
+//       input: normalizeInput({
+//         heartRate: 55,
+//         bloodPressureSystolic: 85,
+//         bloodPressureDiastolic: 55,
+//         oxygenSaturation: 94,
+//         temperature: 35.5,
+//       }),
+//       output: { risk: 1 },
+//     },
+//     {
+//       input: normalizeInput({
+//         heartRate: 95,
+//         bloodPressureSystolic: 145,
+//         bloodPressureDiastolic: 95,
+//         oxygenSaturation: 96,
+//         temperature: 38.5,
+//       }),
+//       output: { risk: 1 },
+//     },
+//     {
+//       input: normalizeInput({
+//         heartRate: 75,
+//         bloodPressureSystolic: 130,
+//         bloodPressureDiastolic: 85,
+//         oxygenSaturation: 97,
+//         temperature: 36.8,
+//       }),
+//       output: { risk: 0 },
+//     },
+//   ];
+
+//   trainedModel.train(trainingData);
+//   console.log("New model trained with sample data");
+// }
