@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "preinstall": "Xvfb :99 -ac &",
-    "start": "DISPLAY=:99 node server.js",
-    "start2": "node server.js",
+    "start": "node server.js",
     "train": "node trainModel.js",
     "insert-data": "node insertSampleData.js",
     "docker-build": "docker-compose build",
