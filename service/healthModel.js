@@ -27,9 +27,9 @@ function trainModel(model, trainingData) {
   return model.train(trainingData);
 }
 
-function predict(model, inputData) {
-  const normalizedInput = normalizeData(inputData);
-  return model.run(normalizedInput);
-}
-
-module.exports = { createModel, prepareTrainingData, trainModel, predict };
+// function predict(model, inputData) {
+//   const normalizedInput = normalizeData(inputData);
+//   return model.run(normalizedInput);
+// }
+// predict in module.exports
+module.exports = { createModel, prepareTrainingData, trainModel };
