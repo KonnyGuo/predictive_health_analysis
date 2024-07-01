@@ -1,5 +1,5 @@
 require("dotenv").config({ path: "./configs/.env" });
-
+const connectDB = require("./configs/database");
 const mongoose = require("mongoose");
 const {
   createModel,
@@ -7,19 +7,6 @@ const {
   trainModel,
 } = require("./service/healthModel");
 const Patient = require("./models/patient");
-
-// Add this function to connect to the database
-async function connectToDatabase() {
-  try {
-    await mongoose.connect(process.env.MONGO_URI, {
-      serverSelectionTimeoutMS: 30000, // Increase timeout to 30 seconds
-    });
-    console.log("Connected to MongoDB");
-  } catch (error) {
-    console.error("MongoDB connection error:", error);
-    process.exit(1);
-  }
-}
 
 async function getTrainingData() {
   // Fetch all patients from the database
@@ -37,7 +24,7 @@ async function getTrainingData() {
 async function trainAndSaveModel() {
   try {
     // Connect to the database
-    await connectToDatabase();
+    await connectDB();
 
     // Get training data
     const rawTrainingData = await getTrainingData();
@@ -65,6 +52,7 @@ async function trainAndSaveModel() {
     // Close the database connection
     await mongoose.connection.close();
     console.log("Database connection closed");
+    process.exit(0);
   }
 }
 

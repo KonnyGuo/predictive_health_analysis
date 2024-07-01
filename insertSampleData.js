@@ -1,15 +1,14 @@
 require("dotenv").config({ path: "./configs/.env" });
-const mongoose = require("mongoose");
+const connectDB = require("./configs/database");
 const Patient = require("./models/patient");
+const mongoose = require("mongoose");
 
 // This is the sample data. You can also move this to a separate file if you prefer.
 const sampleData = require("./sampleData.json");
 
 async function insertSampleData() {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
-    console.log("Connected to MongoDB");
-
+    await connectDB();
     await Patient.deleteMany({}); // Clear existing data
     console.log("Cleared existing patient data");
 
@@ -20,6 +19,7 @@ async function insertSampleData() {
   } finally {
     await mongoose.connection.close();
     console.log("Database connection closed");
+    process.exit(0);
   }
 }
 
