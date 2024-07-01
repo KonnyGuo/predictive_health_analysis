@@ -37,6 +37,9 @@ Important:
 To avoid brain.js dependency issues I recommended LTS node (Even-numbered versions like 16, 18, 20) and 3.9-3.11 python versions.
 
 Limitation and future improvements:
+
 More training data needed
+
 Different machine learning model tool
+
 Challenges regarding prediction implementation as data need to be constantly feed into the system.
