@@ -42,4 +42,6 @@ More training data needed
 
 Different machine learning model tool
 
-Challenges regarding prediction implementation as data need to be constantly feed into the system.
+Learning model to be improved
+
+Challenges regarding prediction implementation as data need to be constantly feed into the system
